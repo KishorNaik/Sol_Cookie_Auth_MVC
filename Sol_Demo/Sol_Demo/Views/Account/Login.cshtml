@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@model Sol_Demo.Models.UserModel
+
+<h1>Login</h1>
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="txtUserName">User Name</label>
+                    <input id="txtUserName" type="text" class="form-control" asp-for="@Model.UserName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="txtUserName">Password</label>
+                    <input id="txtUserName" type="password" class="form-control" asp-for="@Model.Password" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input id="btnSubmit" type="submit" class="btn btn-dark" />
+            </div>
+        </div>
+    </div>
+</form>
