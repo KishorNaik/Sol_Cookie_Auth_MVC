@@ -44,7 +44,7 @@ namespace Sol_Demo.Controllers
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, data as ClaimsPrincipal, new AuthenticationProperties
                 {
                     IsPersistent = true,
-                    ExpiresUtc = DateTime.UtcNow.AddMinutes(5)
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(1)
                 });
 
                 if (returnUrl != null && Url.IsLocalUrl(returnUrl))

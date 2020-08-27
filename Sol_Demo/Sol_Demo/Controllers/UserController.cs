@@ -9,7 +9,7 @@ namespace Sol_Demo.Controllers
 {
     public class UserController : Controller
     {
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             return View();
