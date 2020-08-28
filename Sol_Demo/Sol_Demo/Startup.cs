@@ -32,6 +32,22 @@ namespace Sol_Demo
                 .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie();
 
+            // If Request is Ajaz based then use following code
+            //.AddCookie((config) =>
+            // {
+            //     config.LoginPath = new PathString("/Account/Login");
+            //     config.Events.OnRedirectToLogin = (context) =>
+            //     {
+            //         // Is Ajax Request
+            //         if (context.Request.Headers["x-requested-with"] == "XMLHttpRequest")
+            //         {
+            //             context.Response.Redirect(context.RedirectUri);
+            //         }
+
+            //         return Task.CompletedTask;
+            //     };
+            // });
+
             services.AddTransient<IUserRepository, UserRepository>();
         }
 
